@@ -1,0 +1,106 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local RedWood = Instance.new("ScreenGui")
+local RedWoodGUI = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Yeet = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local reanim = Instance.new("TextButton")
+
+--Properties:
+
+RedWood.Name = "RedWood"
+RedWood.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+RedWood.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+RedWoodGUI.Name = "RedWoodGUI"
+RedWoodGUI.Parent = RedWood
+RedWoodGUI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RedWoodGUI.BorderSizePixel = 0
+RedWoodGUI.Position = UDim2.new(0.00729927002, 0, 0.590457201, 0)
+RedWoodGUI.Size = UDim2.new(0, 228, 0, 200)
+RedWoodGUI.Visible = false
+
+Close.Name = "Close"
+Close.Parent = RedWoodGUI
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.75111109, 0, 0, 0)
+Close.Size = UDim2.new(0, 56, 0, 40)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 14.000
+
+Yeet.Name = "Yeet"
+Yeet.Parent = RedWoodGUI
+Yeet.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Yeet.BorderSizePixel = 0
+Yeet.Position = UDim2.new(0, 0, 0.293532342, 0)
+Yeet.Size = UDim2.new(0, 125, 0, 50)
+Yeet.Font = Enum.Font.SourceSans
+Yeet.Text = "Some GUI"
+Yeet.TextColor3 = Color3.fromRGB(255, 255, 255)
+Yeet.TextSize = 14.000
+
+TextLabel.Parent = RedWoodGUI
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 225, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Redwood Prison"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+reanim.Name = "reanim"
+reanim.Parent = RedWoodGUI
+reanim.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+reanim.BorderSizePixel = 0
+reanim.Position = UDim2.new(0.555555582, 0, 0.293532342, 0)
+reanim.Size = UDim2.new(0, 100, 0, 50)
+reanim.Font = Enum.Font.SourceSans
+reanim.Text = "Reanim + netless"
+reanim.TextColor3 = Color3.fromRGB(255, 255, 255)
+reanim.TextSize = 14.000
+
+-- Scripts:
+
+local function UISCDTD_fake_script() -- RedWoodGUI.Drag 
+	local script = Instance.new('Script', RedWoodGUI)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(UISCDTD_fake_script)()
+local function RRKL_fake_script() -- Close.Script 
+	local script = Instance.new('Script', Close)
+
+	script.Parent.Parent:Destroy()
+end
+coroutine.wrap(RRKL_fake_script)()
+local function NFCYS_fake_script() -- Yeet.Script 
+	local script = Instance.new('Script', Yeet)
+
+	function executed()
+		loadstring(game:GetObjects('rbxassetid://5671578245')[1].Source)()
+	end
+	
+	
+	script.Parent.MouseButton1Click:Connect(executed)
+	
+end
+coroutine.wrap(NFCYS_fake_script)()
+local function GGNUCCA_fake_script() -- reanim.Script 
+	local script = Instance.new('Script', reanim)
+
+	function reanim()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V4.lua"))()
+		loadstring(game:HttpGet(('https://pastebin.com/raw/Cu7bKQWN'),true))()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(reanim)
+end
+coroutine.wrap(GGNUCCA_fake_script)()
